@@ -1,32 +1,29 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 /*==================== VARIABLES CSS ====================*/
 
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 26;
-  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-  /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 64%, 34%);
-  --first-color-second: hsl(var(--hue-color), 99%, 28%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 99%, 26%);
-  --text-color: hsl(var(--hue-color), 24%, 47%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --first-color-arrow: hsl(186, 70%, 96%);
-  --container-color: #fff;
-  --text-white:#fff;
+  --first-color: hsla(25, 36%, 17%, 1);
+  --first-color-opacity: rgba(59, 41, 28, 0.644);
+  --first-color-second: hsla(23, 56%, 29%, 1);
+  --first-color-alt: hsla(31, 24%, 47%, 1);
+  --title-color: hsla(30, 34%, 65%, 1);
+  --text-color: hsla(24, 9%, 45%, 1);
+  --first-color-lighter: hsla(31, 35%, 81%, 1);
+  --text-color-light: hsla(34, 30%, 95%, 1);
+  --body-color: hsl(0, 0%, 100%);
+  --text-white:hsl(0, 0%, 100%);
+  --first-color-gray: hsla(0, 0%, 44%, 1);
   /*========== Font and typography ==========*/
-  --body-font: "Inter", sans-serif;
+  --body-font: "Montserrat", sans-serif;
+  --title-font: "Josefin Sans", sans-serif;
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 3.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.1rem;
   --normal-font-size: 0.938rem;
@@ -68,13 +65,13 @@
 /*========== Variables Dark theme ==========*/
 
 body.dark-theme {
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --first-color-arrow: hsl(var(--hue-color), 29%, 16%);
+  --first-color-second: hsl(, 30%, 8%);
+  --title-color: hsl(, 8%, 95%);
+  --text-color: hsl(, 8%, 75%);
+  --input-color: hsl(, 29%, 16%);
+  --body-color: hsl(, 28%, 12%);
+  --container-color: hsl(, 29%, 16%);
+  --first-color-arrow: hsl(, 29%, 16%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -86,7 +83,6 @@ body.dark-theme {
 
 .change-theme {
   font-size: 1.25rem;
-  color: hsl(31, 24%, 47%);
   margin-right: var(--mb-1);
   cursor: pointer;
   transition: .3s;
@@ -149,20 +145,25 @@ img {
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
+  font-size: 2rem;
+  letter-spacing: .68px;
+  font-weight: 500;
   margin-bottom: 2rem;
   position: relative;
 }
 
-/* .section__title::after {
+.section__title::after {
   position: absolute;
   content: "";
+  height: 2px;
+  background-color: var(--title-color);
+} 
+
+.section__title.about_clinic::after{
   right: 0;
-  bottom: 10px;
-  width: 35%;
-  height: 3px;
-  background-color: var(--first-color);
-} */
+  bottom: -10px;
+  width: 800px;
+}
 
 .section__subtitle {
   display: block;
@@ -211,8 +212,8 @@ img {
 }
 
 .nav__logo {
-  width: 80px;
-  height: 60px;
+  width: 136px;
+  height: auto;
 }
 
 .nav__logo:hover {
@@ -245,18 +246,14 @@ img {
   grid-template-columns: 40% 20% 40%;
   gap: 2rem;
 }
-
+header .nav__link {
+  color: var(--text-white);
+}
 .nav__link {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--small-font-size);
-  color: #fff;
-  font-weight: var(--font-medium);
-}
-
-.nav__link:hover {
-  text-decoration: underline;
+  gap: 10px;
+  color: var(--title-color);
+  font-size: .5rem;
 }
 
 .nav__icon {
@@ -303,21 +300,10 @@ img {
 .home.section {
   width: 100%;
   height: 75vh;
-  background-image: url("/assets/img/home/bg_alphaface_new.jpg");
+  background-image: url("/assets/img/home/bg-alphaface-home.svg");
   background-size: cover;
   position: relative;
   background-position: center;
-}
-
-.home.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 60vh;
-  width: 100%;
-  background: linear-gradient(#062f48, transparent);
-  z-index: 0;
 }
 
 .home__container {
@@ -347,9 +333,10 @@ img {
 }
 
 .group-btn a {
-  background-color: var(--first-color);
-  padding: 15px 20px;
-  border-radius: 0.5rem;
+  background-color: var(--body-color);
+  color: var(--first-color-second);
+  padding: 15px 40px;
+  border-radius: 50px;
   text-transform: uppercase;
   transition: 0.4s;
 }
@@ -507,8 +494,19 @@ img {
 }
 
 .about__description {
-  text-align: center;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-1);
+  color: var(--text-color);
+}
+
+.about__description strong{
+  font-weight: 600;
+}
+
+.specialty{
+  margin-bottom: var(--mb-1);
+}
+.specialty li{
+  margin-bottom: var(--mb-0-25);
 }
 
 .about__info {
@@ -1535,10 +1533,6 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about__description {
-    text-align: justify;
-  }
-
   .portfolio__data {
     align-items: flex-start;
   }
@@ -1571,19 +1565,9 @@ img {
   .home.section {
     width: 100%;
     height: 100vh;
-    background-image: url("/assets/img/home/bg_alphaface_new.jpg");
+    background-image: url("/assets/img/home/bg-alphaface-home.svg");
     background-size: cover;
     position: relative;
-  }
-
-  .home.section::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background:hsla(0, 0%, 0%, 0.425);
-    z-index: 0;
   }
 
   .section__subtitle {
@@ -1596,9 +1580,9 @@ img {
   }
 
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: auto;
     transition: 0.4s;
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 
   .nav__icon,
@@ -1608,13 +1592,14 @@ img {
   }
 
   .nav__list {
-    grid-template-columns: 35% 20% 35%;
+    display: flex;
     align-items: center;
+    gap: 100px;
   }
 
   .nav__list div{
     display: flex;
-    gap: 20px;
+    gap: 50px;
   }
 
   .nav__menu {
@@ -1642,32 +1627,29 @@ img {
   }
 
   .home__content h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
     font-size: var(--h1-font-size);
     color: #fff;
   }
 
   .home__content p{
     text-align: center;
-    font-size: var(--small-font-size);
+    font-size: 1.1rem;
   }
 
   .group-btn {
     display: grid;
     margin-top: var(--mb-2-5);
   }
-
-  .group-btn a {
-    background-color: var(--container-color);
-    color: var(--first-color);
-    padding: 15px 20px;
-    border-radius: 1.5rem;
-    text-transform: uppercase;
-    transition: 0.4s;
+  .group-btn a{
+    font-size: 1.2rem;
+    font-weight: 500;
   }
-
   .group-btn a:hover {
     text-decoration: none;
-    box-shadow: 0 0 10px var(--container-color);
+    box-shadow: 0 0 10px var(--body-color);
   }
 
   .home__blob {
@@ -1691,16 +1673,30 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
+  .about{
+    position: relative;
+  }
+
   .about__container {
     column-gap: 5rem;
   }
 
-  .about__img {
-    width: 100%;
+  .about__container img.clinica_home{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: 50px;
+    width: 50%;
+    max-width: 800px;
+    border-radius: 0 25px 25px 0;
   }
 
-  .about__description {
-    text-align: justify;
+  .about__container .nav__link{
+    margin-top: 1.2rem;
+  }
+
+  .about__img {
+    width: 100%;
   }
 
   .about__info {
@@ -1845,7 +1841,7 @@ img {
   }
 
   .nav__link {
-    font-size: var(--h3-font-size);
+    font-size: 1.1rem;
   }
 
   .home__blob {
