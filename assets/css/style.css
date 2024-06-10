@@ -542,6 +542,28 @@ header .nav__link {
   flex-direction: column-reverse;
 }
 
+/*==================== treatments ====================*/
+.treatments{
+  background-color: var(--text-color-light);
+}
+.treatments__data{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+.treatments__data .item__treatments{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.treatments__data .item__treatments img{
+  width: 40px;
+  margin-bottom: 20px;
+}
 /*==================== SERVICES ====================*/
 
 .services__container {
@@ -1790,6 +1812,9 @@ header .nav__link {
 }
 
 @media screen and (min-width: 840px) {
+  .padding-left{
+    padding-left: 100px;
+  }
   .ortognatica_content {
     grid-template-columns: 65% 33%;
   }
@@ -1913,4 +1938,13 @@ header .nav__link {
 
   }
   
+}
+
+@media only screen and (min-width:1300px){
+  .about__container{
+    gap: 0;
+  }
+  .about{
+    min-height: 720px;
+  }
 }
