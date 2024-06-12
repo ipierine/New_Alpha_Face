@@ -215,7 +215,7 @@ var swiperEspecialidades = new Swiper(".especialidadesSwiper", {
       slidesPerView: 2,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
   },
 });

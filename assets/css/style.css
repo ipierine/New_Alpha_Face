@@ -1150,6 +1150,7 @@ header .nav__link {
 
 #especialidades {
   background-color: var(--text-color-light);
+  padding: 6rem 0;
 }
 
 #especialidades h2 {
@@ -1166,11 +1167,9 @@ header .nav__link {
 }
 
 .specialty__data img {
-  width: 100%;
-  height: 200px;
-  /* Altura fixa */
+  width: auto;
+  height: 280px; 
   object-fit: cover;
-  /* Manter a proporção da imagem */
 }
 
 .specialty__description {
@@ -1403,16 +1402,16 @@ header .nav__link {
 /*==================== AGENDAMENTO ====================*/
 
 .scheduling {
-  background-color: #3E3E3E;
-  color: white;
-  padding: 20px;
+  background-image: url("/assets/img/home/bg_footer.jpg");
+  color: #fff;
   display: flex;
-  align-items: center;
+  align-items: center; 
+  position: relative;
+  width: 100%;
 }
 
-.scheduling__container {
-  display: flex;
-  justify-content: space-between;
+.schedule__content{
+  grid-template-columns: 45% 55%;
 }
 
 .scheduling__content {
@@ -1421,18 +1420,31 @@ header .nav__link {
 
 .scheduling__title {
   color: #fff;
+  font-family: var(--title-font);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 500;
   text-align: left;
-  padding-bottom: 18px;
-  border-bottom: 2px solid #fff;
+  width: max-content;
+  position: relative;
+}
+
+.scheduling__title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  height: 2px;
+  width: 800px;
+  background-color: #fff;
 }
 
 .scheduling__description {
+  margin-top: 40px;
   color: #fff;
 }
 
 .scheduling-btn .nav__link {
+  margin-top: 40px;
   display: inline-block;
   padding: 10px 20px;
   background-color: #fff;
@@ -1443,13 +1455,16 @@ header .nav__link {
 
 .scheduling__image {
   flex-basis: 50%;
+  position: relative;
 }
 
 .scheduling__image img {
+  top: -70px;
+  position: absolute;
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-width: 400px;
   border-radius: 25px;
+  z-index: 1;
 }
 
 
@@ -1457,7 +1472,7 @@ header .nav__link {
 /*==================== FOOTER ====================*/
 
 .footer {
-  padding-top: 2rem;
+  padding-top: 10rem;
 }
 
 .footer__bg {
@@ -1551,7 +1566,9 @@ header .nav__link {
 }
 
 .logo-footer {
-  width: 50%;
+  width: 184px;
+  height: 165px;
+  margin-bottom: 40px;
 }
 
 .contacts_grid {
@@ -1565,10 +1582,7 @@ header .nav__link {
   margin-left: 100px;
 }
 
-.info_footer h2,
-p,
-a,
-i {
+.info_footer h2, p, a{
   color: var(--first-color-second);
 }
 
@@ -1586,7 +1600,7 @@ i {
 }
 
 .footer__socials {
-  margin-top: 45px;
+  margin-top: 100px;
   justify-self: left;
 }
 
@@ -2044,8 +2058,7 @@ i {
   }
 
   .footer__bg {
-    padding: 0.5rem 0 1rem;
-    /*editado mostrar ao lucas*/
+    padding: 4rem 0 2rem;
   }
 
   .footer__links {
