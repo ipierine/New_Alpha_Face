@@ -16,7 +16,7 @@
   --first-color-lighter: hsla(31, 35%, 81%, 1);
   --text-color-light: hsla(34, 30%, 95%, 1);
   --body-color: hsl(0, 0%, 100%);
-  --text-white:hsl(0, 0%, 100%);
+  --text-white: hsl(0, 0%, 100%);
   --first-color-gray: hsla(0, 0%, 44%, 1);
   /*========== Font and typography ==========*/
   --body-font: "Montserrat", sans-serif;
@@ -134,7 +134,7 @@ img {
   height: auto;
 }
 
-.text_white{
+.text_white {
   color: var(--text-white);
 }
 
@@ -157,16 +157,22 @@ img {
   content: "";
   height: 2px;
   background-color: var(--title-color);
-} 
+}
 
-.section__title.about_clinic::after{
+.section__title.about_clinic::after {
   right: 0;
   bottom: -10px;
   width: 800px;
 }
 
-.section__title.ontognathic__title::after{
+.section__title.ontognathic__title::after {
   left: 0;
+  bottom: -10px;
+  width: 800px;
+}
+
+.section__title.ortodontia__title::after {
+  right: 0;
   bottom: -10px;
   width: 800px;
 }
@@ -252,9 +258,11 @@ img {
   grid-template-columns: 40% 20% 40%;
   gap: 2rem;
 }
+
 header .nav__link {
   color: var(--text-white);
 }
+
 .nav__link {
   display: flex;
   gap: 10px;
@@ -504,14 +512,15 @@ header .nav__link {
   color: var(--text-color);
 }
 
-.description strong{
+.description strong {
   font-weight: 600;
 }
 
-.specialty{
+.specialty {
   margin-bottom: var(--mb-1);
 }
-.specialty li{
+
+.specialty li {
   margin-bottom: var(--mb-0-25);
 }
 
@@ -549,31 +558,38 @@ header .nav__link {
 }
 
 /*==================== treatments ====================*/
-.treatments{
+.treatments {
   background-color: var(--text-color-light);
 }
-.treatments__data{
+
+.treatments__data {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 40px 20px;
 }
-.treatments__data .item__treatments{
+
+.treatments__data .item__treatments {
   width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.treatments__data .item__treatments img{
+
+.treatments__data .item__treatments img {
   width: 40px;
   margin-bottom: 20px;
 }
 
 /*==================== ontognathic ====================*/
-.ontognathic__container{
+.ontognathic__container {
   grid-template-columns: 45% 55%;
+}
+
+.ortodontia__container {
+  grid-template-columns: 50% 48%;
 }
 
 
@@ -590,12 +606,12 @@ header .nav__link {
   margin-bottom: 20px;
 }
 
-.invisalign_content{
+.invisalign_content {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.img_invisalign_sorriso{
+.img_invisalign_sorriso {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -612,7 +628,7 @@ header .nav__link {
   margin-bottom: 20px;
 }
 
-.img_invisalign_sorriso h4{
+.img_invisalign_sorriso h4 {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -621,7 +637,7 @@ header .nav__link {
   border-radius: 0 0 .5rem .5rem;
 }
 
-.img_invisalign{
+.img_invisalign {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -630,18 +646,18 @@ header .nav__link {
   height: 300px;
   background-size: cover;
   background-image: url(/assets/img/antes-depois/invisalign-antes.jpg);
-  background-position-x: center ;
+  background-position-x: center;
   transition: .5s;
   cursor: pointer;
   border-radius: .5rem;
   margin-inline: auto;
 }
 
-.img_invisalign:hover{
+.img_invisalign:hover {
   background-image: url(/assets/img/antes-depois/invisalign-depois.jpg)
 }
 
-.img_invisalign h4{
+.img_invisalign h4 {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -855,7 +871,7 @@ header .nav__link {
   transform: translateX(0.25rem);
 }
 
-.img_botox{
+.img_botox {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -871,11 +887,11 @@ header .nav__link {
   margin-inline: auto;
 }
 
-.img_botox:hover{
+.img_botox:hover {
   background-image: url(/assets/img/antes-depois/botox-depois.jpg);
 }
 
-.img_botox h4{
+.img_botox h4 {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -885,7 +901,7 @@ header .nav__link {
 }
 
 
-.img_labial{
+.img_labial {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -901,11 +917,11 @@ header .nav__link {
   margin-inline: auto;
 }
 
-.img_labial:hover{
+.img_labial:hover {
   background-image: url(/assets/img/antes-depois/labial-depois.png);
 }
 
-.img_labial h4{
+.img_labial h4 {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -914,7 +930,7 @@ header .nav__link {
   border-radius: 0 0 .5rem .5rem;
 }
 
-.img_lente h4{
+.img_lente h4 {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -923,7 +939,7 @@ header .nav__link {
   border-radius: 0 0 .5rem .5rem;
 }
 
-.img_lente{
+.img_lente {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -939,15 +955,15 @@ header .nav__link {
   margin-inline: auto;
 }
 
-.img_lente:hover{
+.img_lente:hover {
   background-image: url(/assets/img/antes-depois/lente-depois.png);
 }
 
-.img_malar{
+.img_malar {
   margin-inline: auto;
 }
 
-.img_malar p{
+.img_malar p {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -955,32 +971,32 @@ header .nav__link {
   display: none;
 }
 
-.img_malar p a{
- color: var(--h1-font-size) ;
+.img_malar p a {
+  color: var(--h1-font-size);
 }
 
-.img_malar img{
+.img_malar img {
   max-width: 250px;
   height: auto;
   border-radius: 1rem;
 }
 
 
-.img_bio{
+.img_bio {
   margin-inline: auto;
 }
 
-.img_bio img{
+.img_bio img {
   max-width: 250px;
   height: auto;
   border-radius: 1rem;
 }
 
-.img_facial{
+.img_facial {
   margin-inline: auto;
 }
 
-.img_facial p{
+.img_facial p {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -988,21 +1004,21 @@ header .nav__link {
   display: none;
 }
 
-.img_facial p a{
- color: var(--h1-font-size) ;
+.img_facial p a {
+  color: var(--h1-font-size);
 }
 
-.img_facial img{
+.img_facial img {
   max-width: 320px;
   height: auto;
   border-radius: 1rem;
 }
 
-.img_implante{
+.img_implante {
   margin-inline: auto;
 }
 
-.img_implante p{
+.img_implante p {
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -1010,11 +1026,11 @@ header .nav__link {
   display: none;
 }
 
-.img_implante p a{
- color: var(--h1-font-size) ;
+.img_implante p a {
+  color: var(--h1-font-size);
 }
 
-.img_implante img{
+.img_implante img {
   max-width: 320px;
   height: auto;
   border-radius: 1rem;
@@ -1132,12 +1148,12 @@ header .nav__link {
 
 /*==================== ESPECIALIDADES ====================*/
 
-#especialidades{
+#especialidades {
   background-color: var(--text-color-light);
   padding: 6rem 0;
 }
 
-#especialidades h2{
+#especialidades h2 {
   text-align: center;
   padding: 18px;
   border-bottom: 2px solid var(--title-color);
@@ -1149,20 +1165,23 @@ header .nav__link {
   text-align: center;
   margin: 10px;
 }
+
 .specialty__data img {
   width: auto;
   height: 280px; 
   object-fit: cover;
 }
+
 .specialty__description {
   margin-top: 10px;
 }
+
 .swiper-container {
   padding: 20px 0;
   cursor: pointer;
 }
 
-#especialidades a{
+#especialidades a {
   color: #95795b;
   display: block;
   width: fit-content;
@@ -1275,7 +1294,7 @@ header .nav__link {
 }
 
 /*==================== TOUR ====================*/
-.video__container iframe{
+.video__container iframe {
   width: 100%;
   height: 100%;
   min-height: 208px;
@@ -1430,8 +1449,8 @@ header .nav__link {
   padding: 10px 20px;
   background-color: #fff;
   color: var(--first-color-second);
-  border-radius: 25px; 
-  text-decoration: none; 
+  border-radius: 25px;
+  text-decoration: none;
 }
 
 .scheduling__image {
@@ -1503,7 +1522,8 @@ header .nav__link {
   color: var(--text-color-light);
 }
 
-/*Ajustes realizados na linha 1452*//*
+/*Ajustes realizados na linha 1452*/
+/*
 .footer__title,
 .footer__subtitle,
 .footer__link,
@@ -1558,7 +1578,7 @@ header .nav__link {
   gap: 10px;
 }
 
-.footer__menu{
+.footer__menu {
   margin-left: 100px;
 }
 
@@ -1566,7 +1586,7 @@ header .nav__link {
   color: var(--first-color-second);
 }
 
-.info_footer h2{
+.info_footer h2 {
   font-size: 15px;
 }
 
@@ -1574,8 +1594,9 @@ header .nav__link {
   font-size: 1.5rem;
 }
 
-.info_footer ul, .contact__footer{
-margin-top: 10px;
+.info_footer ul,
+.contact__footer {
+  margin-top: 10px;
 }
 
 .footer__socials {
@@ -1688,25 +1709,25 @@ margin-top: 10px;
   }
 
 
-.about__container,
-.skills__container,
-.project__container,
-.contact__container{
-  grid-template-columns: repeat(2, 1fr);
-}
+  .about__container,
+  .skills__container,
+  .project__container,
+  .contact__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.footer__container {
-  grid-template-columns: repeat(3, 1fr);
-}
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.portfolio__data {
-  align-items: flex-start;
-}
+  .portfolio__data {
+    align-items: flex-start;
+  }
 
-.video__container{
-  width: 100%;
-  height: 416px;
-}
+  .video__container {
+    width: 100%;
+    height: 416px;
+  }
 }
 
 /* For medium devices */
@@ -1763,7 +1784,7 @@ margin-top: 10px;
     gap: 100px;
   }
 
-  .nav__list div{
+  .nav__list div {
     display: flex;
     gap: 50px;
   }
@@ -1800,7 +1821,7 @@ margin-top: 10px;
     color: #fff;
   }
 
-  .home__content p{
+  .home__content p {
     text-align: center;
     font-size: 1.1rem;
   }
@@ -1809,10 +1830,12 @@ margin-top: 10px;
     display: grid;
     margin-top: var(--mb-2-5);
   }
-  .group-btn a{
+
+  .group-btn a {
     font-size: 1.2rem;
     font-weight: 500;
   }
+
   .group-btn a:hover {
     text-decoration: none;
     box-shadow: 0 0 10px var(--body-color);
@@ -1831,15 +1854,21 @@ margin-top: 10px;
     color: #fff;
   }
 
-  .img_botox, .img_labial, .img_lente, .img_malar, .img_bio, .img_facial, .img_implante{
+  .img_botox,
+  .img_labial,
+  .img_lente,
+  .img_malar,
+  .img_bio,
+  .img_facial,
+  .img_implante {
     margin-inline: initial;
   }
 
-  .invisalign_content{
+  .invisalign_content {
     grid-template-columns: 1fr 1fr;
   }
 
-  .about__container.container{
+  .about__container.container {
     position: relative;
   }
 
@@ -1847,17 +1876,17 @@ margin-top: 10px;
     column-gap: 5rem;
   }
 
-  .about__container img.clinica_home{
+  .about__container img.clinica_home {
     position: absolute;
     left: -360px;
     z-index: 2;
     top: -34px;
     width: 100%;
     max-width: 800px;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
   }
 
-  .about__container .nav__link{
+  .about__container .nav__link {
     margin-top: 1.2rem;
   }
 
@@ -1868,14 +1897,21 @@ margin-top: 10px;
   .about__info {
     justify-content: space-between;
   }
-  .ontognathic{
+
+  .ontognathic,
+  .ortodontia {
     padding-top: 10rem;
   }
-  .ontognathic__container.container{
+
+  .ontognathic__container.container {
     padding-right: 0;
   }
 
-  .content__image-ontognathic{
+  .ortodontia__container.container {
+    padding-left: 0;
+  }
+
+  .content__image-ontognathic {
     width: 200%;
     height: 500px;
     background-color: var(--first-color-lighter);
@@ -1884,7 +1920,7 @@ margin-top: 10px;
     position: relative;
   }
 
-  .content__image-ontognathic img{
+  .content__image-ontognathic img {
     position: absolute;
     left: 60px;
     top: -80px;
@@ -1893,7 +1929,7 @@ margin-top: 10px;
     border-radius: 25px;
   }
 
-  .ontognathic__container .other__procedures{
+  .ontognathic__container .other__procedures {
     margin-top: 50px;
     padding-left: 10px;
     display: flex;
@@ -1904,14 +1940,14 @@ margin-top: 10px;
     border-left: 2px solid var(--title-color);
   }
 
-  .all__procedures{
+  .all__procedures {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 60px;
   }
 
-  .procedure_item{
+  .procedure_item {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1921,9 +1957,29 @@ margin-top: 10px;
     font-weight: 500;
   }
 
-  .all__procedures .procedure_item img{
+  .all__procedures .procedure_item img {
     width: 40px;
   }
+
+  .content__image-ortodontia {
+    width: 200%;
+    height: 500px;
+    background-color: var(--first-color-lighter);
+    left: -100%;
+    top: -30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .content__image-ortodontia img {
+    position: absolute;
+    right: 60px;
+    top: -80px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+  }
+
 
   .qualification__tabs {
     justify-content: center;
@@ -1949,8 +2005,9 @@ margin-top: 10px;
   .services__modal-content {
     width: max-content;
   }
+
   .portfolio__description {
-   text-align: justify;
+    text-align: justify;
   }
 
   .portfolio__img {
@@ -1983,14 +2040,15 @@ margin-top: 10px;
 
   .invisalign__description {
     text-align: justify;
-}
+  }
+
   .footer__container {
     grid-template-columns: 30% 66%;
     margin-top: 20px;
     padding: 20px;
   }
 
-    .video__container{
+  .video__container {
     width: 100%;
     height: 460px;
   }
@@ -2011,9 +2069,10 @@ margin-top: 10px;
 }
 
 @media screen and (min-width: 840px) {
-  .padding-left{
+  .padding-left {
     padding-left: 100px;
   }
+
   .ortognatica_content {
     grid-template-columns: 65% 33%;
   }
@@ -2032,7 +2091,7 @@ margin-top: 10px;
     height: 315px;
   }
 
-  .video__container{
+  .video__container {
     width: 100%;
     height: 620px;
   }
@@ -2130,20 +2189,21 @@ margin-top: 10px;
 }
 
 @media only screen and (max-width:700px) and (max-height:450px) {
-  
-  .home.section{
+
+  .home.section {
     width: 100%;
     height: 100vh !important;
 
   }
-  
+
 }
 
-@media only screen and (min-width:1300px){
-  .about__container{
+@media only screen and (min-width:1300px) {
+  .about__container {
     gap: 0;
   }
-  .about{
+
+  .about {
     min-height: 720px;
   }
 }
