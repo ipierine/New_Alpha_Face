@@ -516,10 +516,6 @@ header .nav__link {
   font-weight: 600;
 }
 
-.specialty {
-  margin-bottom: var(--mb-1);
-}
-
 .specialty li {
   margin-bottom: var(--mb-0-25);
 }
@@ -1462,7 +1458,7 @@ header .nav__link {
   top: -70px;
   position: absolute;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 25px;
   z-index: 1;
 }
@@ -1472,7 +1468,7 @@ header .nav__link {
 /*==================== FOOTER ====================*/
 
 .footer {
-  padding-top: 10rem;
+  padding-top: 20rem;
 }
 
 .footer__bg {
@@ -1901,6 +1897,10 @@ header .nav__link {
   .ontognathic,
   .ortodontia {
     padding-top: 10rem;
+  }
+
+  .ortodontia{
+    padding-bottom: 10rem;
   }
 
   .ontognathic__container.container {
