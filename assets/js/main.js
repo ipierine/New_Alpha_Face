@@ -199,7 +199,26 @@ sliderThumb.forEach((slideThumb, i) => {
   });
 });
 
-/*==================== IMAGENS ESPECIALIDADES  ====================*/
+/*==================== ESPECIALIDADES SWIPER  ====================*/
+var swiperEspecialidades = new Swiper(".especialidadesSwiper", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    568: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
 
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper(".testimonial__container", {
