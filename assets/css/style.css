@@ -1130,8 +1130,47 @@ header .nav__link {
   outline: transparent;
 }
 
-/*==================== ESPECIALIDADE ====================*/
-.content_after-before {
+/*==================== ESPECIALIDADES ====================*/
+
+#especialidades{
+  background-color: var(--text-color-light);
+}
+
+#especialidades h2{
+  text-align: center;
+  padding: 18px;
+  border-bottom: 2px solid var(--title-color);
+  width: 30%;
+  margin: 0 auto;
+}
+
+.specialty__data {
+  text-align: center;
+  margin: 10px;
+}
+.specialty__data img {
+  width: 100%;
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Manter a proporção da imagem */
+}
+.specialty__description {
+  margin-top: 10px;
+}
+.swiper-container {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+#especialidades a{
+  color: #95795b;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* .content_after-before {
   display: flex;
   justify-content: center;
 }
@@ -1202,7 +1241,7 @@ header .nav__link {
   background: var(--first-color);
   border: 1px solid #ffff;
   transition: all 300ms ease-in-out;
-}
+} */
 
 /*==================== PROJECT IN MIND ====================*/
 
@@ -1293,7 +1332,7 @@ header .nav__link {
 
 /*==================== CONTACT ME ====================*/
 
-.contact__container {
+/* .contact__container {
   row-gap: 3rem;
 }
 
@@ -1338,7 +1377,61 @@ header .nav__link {
   border: 0;
   outline: transparent;
   padding: 0.25rem 0.5rem 0.5rem 0;
+} */
+
+/*==================== AGENDAMENTO ====================*/
+
+.scheduling {
+  background-color: #3E3E3E;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center; 
 }
+
+.scheduling__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scheduling__content {
+  flex-basis: 50%;
+}
+
+.scheduling__title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 18px; 
+  border-bottom: 2px solid #fff;
+}
+
+.scheduling__description {
+  color: #fff;
+}
+
+.scheduling-btn .nav__link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: var(--first-color-second);
+  border-radius: 25px; 
+  text-decoration: none; 
+}
+
+.scheduling__image {
+  flex-basis: 50%;
+}
+
+.scheduling__image img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  border-radius: 25px;
+}
+
+
 
 /*==================== FOOTER ====================*/
 
@@ -1346,16 +1439,17 @@ header .nav__link {
   padding-top: 2rem;
 }
 
+.footer__bg {
+  position: relative;
+  background-color: hsl(30, 34%, 65%);
+  color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+
 .footer__container {
   row-gap: 3.5rem;
 }
 
-.footer__bg {
-  position: relative;
-  background-color: #C3A586;
-  color: #723f20;
-  padding: 2rem 0 3rem;
-}
 
 .footer__title {
   font-size: var(--h1-font-size);
@@ -1397,7 +1491,7 @@ header .nav__link {
 .footer__subtitle,
 .footer__link,
 .footer__social {
-  color: #723f20;
+  color: var(--first-color-second);
 }*/
 
 .section__thanks {
@@ -1450,7 +1544,7 @@ header .nav__link {
 }
 
 .info_footer h2, p, a, i{
-  color: #723f20;
+  color: var(--first-color-second);
 }
 
 .info_footer h2{
